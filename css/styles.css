@@ -237,6 +237,15 @@ display: flex;
     justify-content: center;
 }
 
+/* тут докодити іконки! */
+
+.i-benef {
+    background-color: #F4F4FD;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;;
+    margin-bottom: 8px; 
+}
+
 .benef-menu-title {
     color: #2E2F42;
     font-size: 20px;
@@ -380,4 +389,32 @@ display: flex;
     line-height: 24px;
     letter-spacing: 0.32px;
     width: 264px;
+}
+
+.footer-links-title {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; 
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
+}
+
+.icon-links-list {
+    display: flex;
+    gap: 16px;
+}
+
+/* доробити тут іконки */
+
+.icon-links-list .i-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4D5AE5;
+   
 }
