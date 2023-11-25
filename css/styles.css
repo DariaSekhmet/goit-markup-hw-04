@@ -1,3 +1,4 @@
+/* ЗАГАЛЬНІ СТИЛІ: */
 body {
     font-family: 'Roboto', sans-serif;
     color: #434455;
@@ -10,6 +11,7 @@ ul {
 
 a {
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -63,6 +65,8 @@ max-width: 1158px;
 padding: 0 15px;
 margin: 0 auto;
 }
+
+/* СТИЛІ ДЛЯ ХЕДЕРА: */
 
 .top-header {
 border-bottom: 1px solid #E7E9FC;
@@ -221,6 +225,9 @@ border-bottom: 1px solid #E7E9FC;
 .order-button:hover, .order-button:focus {
 background-color: #404BBF;
 }
+
+/* СТИЛІ ДРУГОЇ СЕКЦІЇ (БЕЗ ЗАГОЛОВКУ):*/
+
 .benef-thumb {
 display: flex;
 }
@@ -236,15 +243,21 @@ display: flex;
     width: calc((100% - 24px * 3) / 4);
     justify-content: center;
 }
-
-/* тут докодити іконки! */
-
-.i-benef {
-    background-color: #F4F4FD;
-    border: 1px solid #8E8F99;
-    border-radius: 4px;;
-    margin-bottom: 8px; 
+ 
+.benef-icons-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    background-color: #f4f4fd;
+    padding: 24px 100px;
+    margin-bottom: 8px;
+    fill: #2e2f42;
 }
+
 
 .benef-menu-title {
     color: #2E2F42;
@@ -262,6 +275,8 @@ display: flex;
     letter-spacing: 0.32px;
 }
 
+/* СТИЛІ ДЛЯ ТРЕТЬОЇ СЕКЦІЇ (КОМАНДА) */
+
 .team-sect {
     background-color: #F4F4FD;
 }
@@ -269,6 +284,11 @@ display: flex;
 .team-menu {
     display: flex;
     gap: 24px;
+}
+
+/* оце я не панімаю!!! */
+.team-menu:hover .team-menu-item {
+    background: #fff;
 }
 
 .team-title {
@@ -311,6 +331,37 @@ display: flex;
     padding: 32px 0;
 }
 
+.social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 8px;
+}
+
+.social-list-item:hover .social-list-link,
+.social-list-link:focus {
+    background-color: #404bbf;
+}
+
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    width: 40px;
+    height: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list-icon {
+    fill: #f4f4fd;
+}
+
+
+/* СТИЛІ ДЛЯ ЧЕТВЕРТОЇ СЕКЦІЇ (ПОРТФОЛІО): */
+
 .portf-title {
     color: #2E2F42;
     font-size: 36px;
@@ -325,7 +376,9 @@ display: flex;
 
 .portf-menu-item {
     width: calc((100% - 24px * 2) / 3);
-
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portf-menu-title {
@@ -342,8 +395,40 @@ display: flex;
 .portf-menu {
     display: flex;
     flex-wrap: wrap;
-    gap: 48px 24px;
-    
+    gap: 48px 24px; 
+}
+
+.portf-menu:hover .portf-menu-item {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.overlay-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-text {
+    position: absolute;
+    overflow: auto;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    color: #f4f4fd;
+}
+
+.portf-menu-item:hover .card-text {
+    transform: translateY(0%);
 }
 
 .app-style-thumb {
@@ -359,6 +444,8 @@ display: flex;
     letter-spacing: 0.32px;
     align-self: stretch;
 }
+
+/* СТИЛІ ФУТЕРА: */
 
 .down-sect {
     background-color: #2E2F42;
@@ -381,6 +468,14 @@ display: flex;
     color: #F4F4FD;
     line-height: 1.17;
 }
+.down-logo-paragraph {
+    margin-right: 120px;
+}
+
+.down-thumb {
+    display: flex;
+    align-items: baseline;
+}
 
 .down-text {
     color: #F4F4FD;
@@ -392,12 +487,12 @@ display: flex;
 }
 
 .footer-links-title {
+    font-family: "Roboto", sans-serif;
     color: #fff;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
     line-height: 150%; 
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     margin-bottom: 16px;
 }
 
@@ -406,15 +501,10 @@ display: flex;
     gap: 16px;
 }
 
-/* доробити тут іконки */
+.i-footer {
+    fill: #f4f4fd;
+}
 
-.icon-links-list .i-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #4D5AE5;
-   
+.icon-links:hover .social-list-link, .media-icons:focus {
+    background-color: #31d0aa;
 }
